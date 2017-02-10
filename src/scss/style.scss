@@ -2,8 +2,8 @@
 /*-------------------------------------------------*/
 /*    bootstrap
 /*-------------------------------------------------*/
-@import "libs/bootstrap-grid.scss";
-// @import "libs/normalize";
+// @import "libs/bootstrap-grid.scss";
+@import "libs/normalize";
 /*-------------------------------------------------*/
 /*    boilerplate
 /*-------------------------------------------------*/
@@ -41,7 +41,9 @@
 $container-width: 1200px;
 body{
     $max-width: $container-width;
-    background-color: white;
+    font-size: 14px;
+    background-color: #f1f1f1;
+    font-family:"Gotham Pro";
 }
 
 .container{
@@ -49,7 +51,42 @@ body{
     margin: auto;
 }
 
+.page{
+  min-height: 200px;
+  padding-left:300px;
+  max-width:1680px;
+}
 $second-color: #2d2c32;
+
+/*-------------------------------------------------*/
+/*  elements
+/*-------------------------------------------------*/
+
+/*-------------------------------------------------*/
+/*  main-menu
+/*-------------------------------------------------*/
+
+.page__menu{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #212b37;
+  padding: 55px 50px;
+  a{
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/*-------------------------------------------------*/
+/*  main-header
+/*-------------------------------------------------*/
+
+.main-header{
+  background-color: white;
+}
 
 /*-------------------------------------------------*/
 /*  helper classes

@@ -108,7 +108,13 @@ gulp.task('build:img', function(){
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()]
         }))
+        .on("error", notify.onError({
+            message: "Ошибка: <%= error.message %>",
+            title: "Ошибка запуска"}))
         .pipe(gulp.dest(path.build.img))
+        .on("error", notify.onError({
+            message: "Ошибка: <%= error.message %>",
+            title: "Ошибка запуска"}))
 		.pipe(reload({stream: true}));
 })
 
